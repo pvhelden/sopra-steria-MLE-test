@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>California Housing Price Prediction</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>California Housing Price Prediction</h1>
+
+  <form id="predictionForm">
+
+    <div class="form-group">
+      <label for="longitude">Longitude:</label>
+      <input type="number" step="0.0001" id="longitude" name="longitude" required>
+    </div>
+
+    <div class="form-group">
+      <label for="latitude">Latitude:</label>
+      <input type="number" step="0.0001" id="latitude" name="latitude" required>
+    </div>
+
+    <div class="form-group">
+      <label for="house_age">House Age:</label>
+      <input type="number" step="0.1" id="house_age" name="house_age" required>
+    </div>
+
+    <div class="form-group">
+      <label for="total_rooms">Total Rooms:</label>
+      <input type="number" step="1" id="total_rooms" name="total_rooms" required>
+    </div>
+
+    <div class="form-group">
+      <label for="total_bedrooms">Total Bedrooms:</label>
+      <input type="number" step="1" id="total_bedrooms" name="total_bedrooms" required>
+    </div>
+
+    <div class="form-group">
+      <label for="population">Population:</label>
+      <input type="number" step="1" id="population" name="population" required>
+    </div>
+
+    <div class="form-group">
+      <label for="households">Households:</label>
+      <input type="number" step="1" id="households" name="households" required>
+    </div>
+
+    <div class="form-group">
+      <label for="med_inc">Median Income:</label>
+      <input type="number" step="0.0001" id="med_inc" name="med_inc" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ocean_prox">Ocean Proximity</label>
+      <select id="ocean_prox" name="ocean_prox" required>
+        <option value="NEAR BAY">Near Bay</option>
+        <option value="NEAR OCEAN">Near Ocean</option>
+        <option value="<1H OCEAN"><1h Ocean</option>
+        <option value="INLAND" selected>Inland</option>
+        <option value="ISLAND" selected>Island</option>
+      </select>
+    </div>
+
+    <button type="submit">Predict</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+<script src="../static/script.js"></script>
+</body>
+</html>
